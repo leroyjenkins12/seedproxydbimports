@@ -5,7 +5,7 @@
 mkdir -p data/db
 
 echo "Which ip address do you want to host the db on? Here are the system ip addresses I have found:"
-hostname -i
+hostname -i | tr " " "\n"
 echo "(type the ip address below)"
 read host_address
 echo 'Thank you. For your confirmation, the server is now starting on '${host_address}
